@@ -39,3 +39,5 @@ variable "metadata" {
   type = "map"
 
 }
+
+variable "google_zone" {}

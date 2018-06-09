@@ -35,6 +35,7 @@ resource "google_compute_instance" "instance-single-datadisk" {
 
 resource "google_compute_disk" "instance-single-datadisk-disk" {
   name        = "${var.name}-datadisk"
+  zone        = "${var.google_zone}"
   size        = "${var.datadisk-size}"
   type        = "${var.datadisk-type}"
   labels {
@@ -42,5 +43,4 @@ resource "google_compute_disk" "instance-single-datadisk-disk" {
   }
 
 }
-
 
