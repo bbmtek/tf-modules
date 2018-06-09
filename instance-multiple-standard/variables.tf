@@ -32,3 +32,8 @@ variable "service_account-email" {}
 variable "service_account-scope" {
   type = "list"
 }
+
+variable "metadata" {
+  type = "map"
+
+}

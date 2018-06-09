@@ -1,4 +1,3 @@
-
 resource "google_compute_instance" "instance-single-datadisk" {
   name          = "${var.name}"
   machine_type  = "${var.machine_type}"
@@ -22,7 +21,8 @@ resource "google_compute_instance" "instance-single-datadisk" {
     subnetwork  = "${var.subnetwork}"
   }
 
-  tags          = ["${var.tags}"]
+  tags          = "${var.tags}"
+  metadata      = "${var.metadata}"
 
   service_account {
     email  = "${var.service_account-email}"

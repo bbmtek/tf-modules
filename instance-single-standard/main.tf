@@ -17,7 +17,8 @@ resource "google_compute_instance" "instance-single-standard" {
     subnetwork  = "${var.subnetwork}"
   }
 
-  tags          = ["${var.tags}"]
+  tags          = "${var.tags}"
+  metadata      = "${var.metadata}"
 
   service_account {
     email  = "${var.service_account-email}"
